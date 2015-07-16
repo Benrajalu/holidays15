@@ -1,0 +1,229 @@
+// Body
+	html{
+		background: url('../img/background.jpg') no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+// Main structure
+	
+// Rows
+	.row{
+		@include clearfix();
+		width:100%;
+		position:relative;
+		margin:0 auto;
+		&.padding{
+			padding:0 10px;
+		}
+		&.table-large{
+			display:table;
+			>.columns{
+				display:table-cell;
+				vertical-align: middle;
+				float:none;
+			}
+			@media all and (max-width: $tablet){
+				display:block;
+				>.columns{
+					display:block;
+					width:100%;
+				}
+			}
+		}
+		&.table-medium{
+			display:table;
+			.columns{
+				display:table-cell;
+				vertical-align: middle;
+				float:none;
+			}
+			@media all and (max-width: $mobile){
+				display:block;
+				.columns{
+					display:block;
+				}
+			}
+		}
+		&.table-small{
+			display:table;
+			.columns{
+				display:table-cell;
+				vertical-align: middle;
+				float:none;
+			}
+		}
+		@media all and (max-width:$tablet){
+			&.noPadMobile{
+				padding:0px;
+				.columns{
+					padding:0px;
+				}
+			}
+
+			.columns{	
+				&.mediumPad{
+					padding:0 10px;
+				}
+			}
+		}
+		@media all and (max-width:$mobile){
+			.columns{	
+				&.mediumPad{
+					padding:0px;
+				}
+			}
+		}
+	}
+
+	.rowFluid{
+		width:100%;
+		@include clearfix;
+		position:relative;
+	}
+
+// Columns
+	.columns{
+		float:left;
+		display:block;
+		padding:0 10px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+
+		&.pad0{
+			padding:0px;
+		}
+		&.padR{
+			padding-right:10px;
+		}
+		&.padL{
+			padding-left:10px;
+		}
+
+		@for $i from 1 through 12{
+			&.small-#{$i}{
+				width:(100%/12) * $i;	
+			}
+		}
+
+		@for $i from 1 through 12{
+			&.medium-#{$i}{
+				width:(100%/12) * $i;	
+			}
+		}
+
+		@for $i from 1 through 12{
+			&.large-#{$i}{
+				width:(100%/12) * $i;	
+			}
+		}
+
+		@for $i from 1 through 12{
+			&.large-pull-#{$i}{
+				position:relative;
+				left:-(100%/12) * $i;
+			}
+		}
+		@for $i from 1 through 12{
+			&.large-push-#{$i}{
+				position:relative;
+				left:(100%/12) * $i;
+			}
+		}
+		@for $i from 1 through 12{
+			&.medium-pull-#{$i}{
+				position:relative;
+				left:-(100%/12) * $i;
+			}
+		}
+		@for $i from 1 through 12{
+			&.medium-push-#{$i}{
+				position:relative;
+				left:(100%/12) * $i;
+			}
+		}
+		@for $i from 1 through 12{
+			&.small-pull-#{$i}{
+				position:relative;
+				left:-(100%/12) * $i;
+			}
+		}
+		@for $i from 1 through 12{
+			&.small-push-#{$i}{
+				position:relative;
+				left:(100%/12) * $i;
+			}
+		}
+
+		&.centered{
+			float:none !important;
+			margin:0 auto;
+			position:relative;
+		}
+
+
+		@media all and (max-width: $tablet){
+			&[class^=large-]{
+				width:100%;
+				padding:0px;
+			}
+			@for $i from 1 through 12{
+				&.large-pull-#{$i}{
+					position:static;
+					left:auto;
+				}
+			}
+			@for $i from 1 through 12{
+				&.large-push-#{$i}{
+					position:static;
+					left:auto;
+				}
+			}
+			@for $i from 1 through 12{
+				&.small-#{$i}{
+					width:(100%/12) * $i;	
+				}
+			}
+
+			@for $i from 1 through 12{
+				&.medium-#{$i}{
+					padding:0 10px;
+					width:(100%/12) * $i;	
+				}
+			}
+
+		}
+		@media all and (max-width: $mobile){
+			&[class^=large-]{
+				width:100%;
+				padding:0px;
+			}
+
+			&[class^=medium-]{
+				width:100%;
+				padding:0px;
+			}
+
+			@for $i from 1 through 12{
+				&.medium-pull-#{$i}{
+					position:static;
+					left:auto;
+				}
+			}
+			@for $i from 1 through 12{
+				&.medium-push-#{$i}{
+					position:static;
+					left:auto;
+				}
+			}
+			@for $i from 1 through 12{
+				&.small-#{$i}{
+					width:(100%/12) * $i;	
+				}
+			}
+
+		}
+	}
