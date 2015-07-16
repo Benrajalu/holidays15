@@ -61,4 +61,8 @@ $(window).load(function () {
       type: 'inline',
       mainClass: 'mfp-fade'
     });
+
+  $('img[alt="logo"]').click(function(){
+    $('#index').addClass('off');
+  })
 });

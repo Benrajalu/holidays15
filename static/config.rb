@@ -47,7 +47,7 @@ end
 #   end
 # end
 
-set :css_dir, 'scss'
+set :css_dir, 'css'
 
 set :js_dir, 'js'
 

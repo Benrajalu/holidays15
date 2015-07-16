@@ -1,12 +1,24 @@
-.shadow{
-	@include box-shadow(4px 0px 16px 0px rgba(50,50,50,0.2));
-}
 #index{
 	margin: 30px auto;
 	padding:0px 30px;
 	display:block;
 	width:100%;
 	position:relative;
+	@include transition(all 500ms ease-out);
+	&.off{
+		@include transform(matrix(0.8,0,0,0.8,0,0));
+		opacity:0.8;
+		&:after{
+			content:"";
+			display:block;
+			width:100%;
+			height:100%;
+			position:absolute;
+			top:0px;
+			left:0px;
+			z-index:10
+		}
+	}
 	.leftSide, .rightSide{
 		display:block;
 		position:absolute;
@@ -63,15 +75,9 @@
 			&:hover{
 				.col.blue{
 					@include transform(scale(1.02));
+					background:#24d5d7;
 					article{
 						@include transform(scale(0.9));
-					}
-					&:after{
-						width:100%;
-						height:100%;
-						@include transform(scale(2));
-						right:0px;
-						bottom:0px;
 					}
 				}
 			}
@@ -97,18 +103,6 @@
 					text-align:center;
 					position:relative;
 					@include transition(all 200ms ease-out);
-					&:after{
-						content:"";
-						width:0px;
-						height:0px;
-						right:50%;
-						bottom:50%;
-						@include transition(all 200ms ease-out);
-						background:#24d5d7;
-						position:absolute;
-						z-index: 1;
-						@include transform(rotate(45deg));
-					}
 					article{
 						display:inline-block;
 						line-height: 1;
