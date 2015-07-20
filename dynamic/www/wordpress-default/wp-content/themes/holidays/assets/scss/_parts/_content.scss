@@ -1,0 +1,176 @@
+#content{
+	//display:none;
+	&.on{
+		.backLayer{
+			opacity: 1
+		}
+		.contentHead{
+			opacity:1;
+			a, h2{
+				opacity:1;
+				margin-top:0px;
+			}
+		}
+	}
+	.backLayer{
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:100%;
+		height:100%;
+		z-index:11;
+		opacity:0;
+		@include transition(all 200ms ease-out);
+	}
+	.contentHead{
+		position:fixed;
+		top:0px;
+		left:0px;
+		padding:20px 30px;
+		z-index:13;
+		line-height: 40px;
+		width:100%;
+		opacity:0;
+		@include transition(all 200ms ease-out);
+		a, h2{
+			opacity:0;
+			margin-top:-50px;
+			@include transition(all 300ms ease-out);
+		}
+		a{
+			text-decoration: none;
+			line-height: 80px;
+			display:block;
+			position:absolute;
+			left:30px;
+			top:0px;
+			z-index:2;
+			opacity:0.8;
+			padding:0 15px 0px 0px;
+			@include transition(all 200ms ease-out);
+			i{
+				font-size:37px;
+				color:#fff;
+				display:inline-block;
+				vertical-align: middle;
+				margin-top:-2px;
+			}
+			&:hover{
+				opacity:1;
+				margin-left:-5px;
+			}
+		}
+		h2{
+			@include moon(bold, 48px, #fff);
+			display:block;
+			text-align: center;
+			z-index:1;
+			line-height: 40px;
+			span{
+				font-family: 'moon-light';
+				&:before{
+					content:'- '
+				}
+			}
+		}
+
+		@media only screen and (max-width:800px){
+			h2{
+				font-size:25px;
+				text-align:right;
+			}
+		}
+
+		@media only screen and (max-width:600px){
+			padding:20px 15px;
+			a{
+				left:15px;
+			}
+		}
+
+		@media only screen and (max-width:600px){
+			a i{
+				font-size:25px;
+			}
+		}
+
+		@media only screen and (max-width:400px){
+			h2{
+				font-size:20px;
+				text-align:right;
+			}
+		}
+	}
+	.wysiwyg{
+		position:absolute;
+		top:80px;
+		left:0px;
+		width:100%;
+		padding:0px 30px 40px;
+		z-index:12;
+		article{
+			-webkit-animation-duration: 0.5s;
+	        animation-duration: 0.5s;
+			-webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;	
+	        -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+			background:#fff;
+			padding:0px;
+			@include border-radius(8px);
+			overflow: hidden;
+			> div > img{
+				width:100%;
+				margin-bottom:30px;
+				height:auto;
+			}
+			h2, h3, h4, h5, h6, p{
+				padding:0 80px;
+				margin-bottom:20px;
+			}
+			h2, h3, h4, h5, h6{
+				@include moon(bold, 28px, #696969);
+			}
+			p{
+				@include roboto(light, 18px, #696969);
+				line-height: 1.3;
+				margin-bottom:30px;
+			}
+
+			@media only screen and (max-width:600px){
+				h2, h3, h4, h5, h6, p{
+					padding:0 20px;
+				}
+			}
+		}
+		@media only screen and (max-width:600px){
+			padding:0 15px 30px;
+		}
+	}
+	&.blue{
+		.backLayer, .contentHead{
+			background:#89e5f0;
+		}
+	}
+	&.red{
+		.backLayer, .contentHead{
+			background:#f54e65;
+		}
+	}
+	&.yellow{
+		.backLayer, .contentHead{
+			background:#f9de8b;
+		}
+	}
+}
+
+.admin-bar{
+	#content{
+		.contentHead{
+			top:32px;
+		}
+		.wysiwyg{
+			top:112px;
+		}
+	}
+}

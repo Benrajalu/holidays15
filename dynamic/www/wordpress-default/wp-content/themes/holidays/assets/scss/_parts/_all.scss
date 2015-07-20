@@ -1,0 +1,70 @@
+.shadow{
+	@include box-shadow(4px 0px 16px 0px rgba(50,50,50,0.2));
+}
+
+#spinner{
+	position:fixed;
+	width:100px;
+	height:100px;
+	top:50%;
+	left:50%;
+	margin-top:-50px;
+	margin-left:-50px;
+	z-index:99999;
+	span{
+		display:block;
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:100%;
+		height:100%;
+		//@include animation(rotate 1s ease-out infinite);
+		&:after{
+			content:"";
+			width:20px;
+			height:20px;
+			@include border-radius(100%);
+			position:absolute;
+		}
+		&.red{
+			@include animation(rotate 1s ease-out 0s infinite);
+			&:after{
+				background:#f54e65;
+				top:50%;
+				left:-10;
+				margin-top:-10px;
+				@include animation(summerSault 1s ease-out 0s infinite);
+			}
+		}
+		&.blue{
+			@include animation(rotate 1s ease-out 0.1s infinite);
+			&:after{
+				background:#89e5f0;
+				bottom:-10px;
+				left:50%;
+				margin-left:-10px;
+				@include animation(summerSault 1s ease-out 0.1s infinite);
+			}
+		}
+		&.yellow{
+			@include animation(rotate 1s ease-out 0.2s infinite);
+			&:after{
+				background:#f9de8b;
+				bottom:50%;
+				right:-10%;
+				margin-bottom:-10px;
+				@include animation(summerSault 1s ease-out 0.2s infinite);
+			}
+		}
+	}
+}
+
+.view.ng-leave {
+	@include transition(all 300ms ease-out);
+}
+.view.ng-leave-active {
+    #index{
+		@include transform(matrix(0.8,0,0,0.8,0,0));
+		opacity:0.4;
+    }
+}

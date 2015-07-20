@@ -1,0 +1,19 @@
+// Box sizing, dammit
+	*{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+// Colors
+	$white: #fff;
+	$black: #2f2f2f;
+	$blue:#455a62;
+	$green: #159487;
+	$lightGrey: #eeeeee;
+	$greyText:#3e3e3e;
+
+// Sizes
+	$tablet : 1125px;
+	$mobile : 550px;
+

@@ -1,0 +1,55 @@
+<div id="index" class="{{off}}">
+    <div class="leftSide">
+        <div class="intro element shadow autoLiner">
+            <article>
+                <img ng-src="{{root}}assets/img/logo.png" loaded alt="logo" />
+                <h1>Vacances <span>2015</span></h1>
+                <h2>Nantes -- London -- Bruxelles</h2>
+            </article>
+        </div>
+		
+		<a class="line" href="{{nantes[0].slug}}">
+		    <div class="col shadow" style="background-image:url('{{page.acf.nantes_image.sizes.nantes}}');">
+		    </div>
+		    <div class="col shadow blue autoLiner" >
+		        <article>
+		            <h3>Hors serie</h3>
+		            <hr/>
+		            <h2>Le voyage a <span>Nantes</span></h2>
+		        </article>
+		    </div>
+		</a>
+    </div>
+    <div class="rightSide">
+        <div class="entry red shadow">
+            <img ng-src="{{page.acf.london_image.sizes.cities}}" loaded alt="" />
+            <article class="smartLine">
+                <div>
+                    <h3>Partie 1</h3>
+                    <hr/>
+                    <h2><span>London</span></h2>
+                </div>
+            </article>
+            <ul>
+                <li ng-repeat="post in london | reverse">
+                	<a href="{{post.slug}}">{{post.title}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="entry yellow shadow">
+            <img ng-src="{{page.acf.bruxelles_image.sizes.cities}}" loaded alt="" />
+            <article class="smartLine">
+                <div>
+                    <h3>Partie 2</h3>
+                    <hr/>
+                    <h2><span>Bruxelles</span></h2>
+                </div>
+            </article>
+            <ul>
+                <li ng-repeat="post in bruxelles | reverse">
+                	<a href="{{post.slug}}">{{post.title}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

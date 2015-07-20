@@ -1,0 +1,11 @@
+<div id="content" class="{{ color }} {{state}}">
+	<div class="backLayer"></div>
+	<header class="contentHead">
+		<a href="/" class="back"><i class="fa fa-arrow-left"></i></a>
+		<h2 ng-if="!category">{{post.title}}</h2>
+		<h2 ng-if="category">{{ post.terms.category[0].slug }} <span ng-if="category">{{post.title}}</span></h2>
+	</header>
+	<div class="wysiwyg">
+		<article ng-bind-html="post.acf.post_content" class="shadow"></article>
+	</div>
+</div>
