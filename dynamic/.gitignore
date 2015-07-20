@@ -45,7 +45,6 @@
 /www/wordpress-default/wp-admin
 /www/wordpress-default/wp-includes
 /www/wordpress-default/wp-content/upgrade
-/www/wordpress-default/wp-content/uploads
 /www/wordpress-default/wp-content/themes/holidays/.sass-cache
 
 # And no need to share individual SQL files with each other
