@@ -42,7 +42,6 @@
 /www/wordpress-trunk
 /www/wp-cli
 /www/vvv-hosts
-/www/wordpress-default/wp-includes
 /www/wordpress-default/wp-content/themes/holidays/.sass-cache
 
 # And no need to share individual SQL files with each other
