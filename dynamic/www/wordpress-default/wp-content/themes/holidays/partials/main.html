@@ -8,7 +8,7 @@
             </article>
         </div>
 		
-		<a class="line" href="{{nantes[0].slug}}">
+		<a class="line" href="#/{{nantes[0].slug}}">
 		    <div class="col shadow" style="background-image:url('{{page.acf.nantes_image.sizes.nantes}}');">
 		    </div>
 		    <div class="col shadow blue autoLiner" >
@@ -25,14 +25,14 @@
             <img ng-src="{{page.acf.london_image.sizes.cities}}" loaded alt="" />
             <article class="smartLine">
                 <div>
-                    <h3>Partie 1</h3>
+                    <h3>bientot...</h3>
                     <hr/>
                     <h2><span>London</span></h2>
                 </div>
             </article>
             <ul>
-                <li ng-repeat="post in london | reverse">
-                	<a href="{{post.slug}}">{{post.title}}</a>
+                <li ng-repeat="post in london.slice().reverse()">
+                	<a href="#/{{post.slug}}">{{post.title}}</a>
                 </li>
             </ul>
         </div>
@@ -40,14 +40,14 @@
             <img ng-src="{{page.acf.bruxelles_image.sizes.cities}}" loaded alt="" />
             <article class="smartLine">
                 <div>
-                    <h3>Partie 2</h3>
+                    <h3>bientot...</h3>
                     <hr/>
                     <h2><span>Bruxelles</span></h2>
                 </div>
             </article>
             <ul>
-                <li ng-repeat="post in bruxelles | reverse">
-                	<a href="{{post.slug}}">{{post.title}}</a>
+                <li ng-repeat="post in bruxelles.slice().reverse()">
+                	<a href="#/{{post.slug}}">{{post.title}}</a>
                 </li>
             </ul>
         </div>

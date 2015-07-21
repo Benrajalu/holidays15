@@ -19,6 +19,25 @@
 	}
 }
 
+@include keyframes('fadeIn'){
+  0%{
+    @include opacity(0);
+  }
+  100%{
+    @include opacity(1);
+    @include transform(translateX(100px));
+  }
+}
+
+@include keyframes('fadeOut'){
+  0%{
+    @include opacity(1);
+  }
+  100%{
+    @include opacity(0);
+  }
+}
+
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;

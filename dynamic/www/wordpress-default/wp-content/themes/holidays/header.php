@@ -6,17 +6,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- Use title if it's in the page YAML frontmatter -->
-        <title><?php echo get_the_title( ); ?></title>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+        <title><?php echo get_the_title( ); ?></title>
+        <meta name="author" content="www.benrajalu.net" />
+        <meta name="application-name" content="Vacances 2015" />
         <base href="/">
 
         <?php wp_head(); ?>
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/global.css">
-
-        <meta name="author" content="www.benrajalu.net" />
-        <meta name="application-name" content="Vacances 2015" />
 
         <link rel="icon" type="image/ico" href="./favicon.ico">
     </head>

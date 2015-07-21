@@ -23,8 +23,23 @@ function my_scripts() {
 	);
 
 	wp_enqueue_script(
+		'angularjs-ui-router',
+		get_stylesheet_directory_uri() . '/bower_components/angular-ui-router/release/angular-ui-router.min.js'
+	);
+
+	wp_enqueue_script(
 		'jQuery',
 		get_stylesheet_directory_uri() . '/assets/js/vendor/jquery-1.11.1.min.js'
+	);
+
+	wp_enqueue_script(
+		'magnific-popup',
+		get_stylesheet_directory_uri() . '/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js'
+	);
+
+	wp_enqueue_script(
+		'justifiedGallery',
+		get_stylesheet_directory_uri() . '/bower_components/Justified-Gallery/dist/js/jquery.justifiedGallery.min.js'
 	);
 
 	wp_enqueue_script(
@@ -35,7 +50,7 @@ function my_scripts() {
 	wp_enqueue_script(
 		'my-scripts',
 		get_stylesheet_directory_uri() . '/assets/js/app.js',
-		array( 'angularjs', 'angularjs-route', 'angularjs-sanitize', 'angularjs-animate', 'jQuery', 'plugins' )
+		array( 'angularjs', 'angularjs-route', 'angularjs-sanitize', 'angularjs-animate', 'angularjs-ui-router', 'jQuery', 'magnific-popup', 'justifiedGallery', 'plugins' )
 	);
 
 	wp_localize_script(

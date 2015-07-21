@@ -155,6 +155,9 @@
 			vertical-align: top;
 			@include transition(all 200ms ease-out);
 			overflow:hidden;
+			.autoLiner{
+				@include transition(all 200ms ease-out);
+			}
 			img{
 				width:100%;
 			}

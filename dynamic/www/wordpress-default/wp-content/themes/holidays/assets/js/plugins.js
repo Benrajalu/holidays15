@@ -42,6 +42,12 @@ var smartLine = function(){
   })
 }
 
+$(document).on('click', '.back', function(){
+  $('html,body').animate({
+    scrollTop: 0
+  }, 300);
+});
+
 
 $(window).load(function () {
 

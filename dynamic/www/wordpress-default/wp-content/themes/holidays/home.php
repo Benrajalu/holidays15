@@ -8,7 +8,7 @@
 
 get_header(); ?>
 	<div id="spinner" ng-show="loading"><span class="red"></span><span class="blue"></span><span class="yellow"></span></div>
-	<div ng-view class="view">
+	<div ui-view class="view">
 		
 	</div>
 	

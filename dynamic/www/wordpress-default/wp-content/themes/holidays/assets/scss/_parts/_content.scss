@@ -119,7 +119,7 @@
 			padding:0px;
 			@include border-radius(8px);
 			overflow: hidden;
-			> div > img{
+			> div > img, > img{
 				width:100%;
 				margin-bottom:30px;
 				height:auto;
